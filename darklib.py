@@ -151,3 +151,98 @@ def shortest_word(phrase=str):
 
 #----------------------------------------------- 16
 
+def computing_shapes():  
+    
+    """ This function created by
+    <-- DarkLib developers  --> """
+
+    oper = int(input("what kind of operations you want?\nArea => 1\nCircumference => 2 : "))  
+    shap = input("what is the shape?\nrectangle  r\nsquare => s\ncircle => c\ntriangle => t\nTrapezoidal => tr\nCylinder => cy\nParallelogram  => pa\n : ")  
+    if shap == "r": 
+        w = float(input("enter  the width: "))  
+        l = float(input("enter the length: "))  
+        if w < 0 or l < 0:  
+            print("do not enter negative value")  
+        elif oper == 1:  
+            print(f"the area of rectangle = {w * l}")  
+        elif oper == 2:  
+                print(f"the circumference of rectangle = {2*(w + l)}")  
+    elif shap == "s":  
+        l = float(input("enter the rib: "))  
+        if l < 0:  
+            print("do not enter negative value")  
+        elif oper == 1:  
+                print(f"the area of square = {l ** 2}")  
+        elif oper == 2:  
+                print(f"the circumference of square = {l*4}")  
+    elif shap == "c":  
+        r = float(input("enter the radius: "))  
+        if r < 0:  
+                print("do not enter negative value")  
+        elif oper == 1:  
+                print(f"the area of circle = {3.14*(r**2)}")  
+        elif oper == 2:  
+            print(f"the circumference of circle = {2*3.14*r}")  
+    elif shap == "t":  
+        if oper == 1:  
+            x = float(input("enter the triangles base: "))  
+            y = float(input("enter the height: "))  
+            if x < 0 or y < 0:  
+                 print("do not enter negative value")  
+            else:  
+                print(f"the area of triangle = {0.5*x*y}")  
+        elif oper == 2:  
+            x = float(input("enter the first rib: "))  
+            y = float(input("enter the second rib: "))  
+            z = float(input("enter the third rib: "))  
+            if x < 0 or y < 0 or z < 0:  
+                print("do not enter negative value")  
+            else:  
+                print(f"the circumference of triangle = {x + y + z}") 
+    elif shap == 'tr': 
+        if oper == 1: 
+            x = int(input('enter the first base: ')) 
+            y = int(input('enter the second base: ')) 
+            z = int(input('enter the height: ')) 
+            if x == 0 or y == 0 or z == 0: 
+                print("do not enter negative value")  
+            else: 
+                print(f'the area of Trapezoidal = {((x+y)/2) * z}') 
+        elif oper == 2: 
+            x1 = int(input('enter the fist rib: ')) 
+            x2= int(input('enter the fist rib: ')) 
+            x3 = int(input('enter the fist rib: ')) 
+            x4 = int(input('enter the fist rib: ')) 
+            if 0 in [x1, x2, x3, x4]: 
+                print("do not enter negative value")  
+            else: 
+                print(f"the circumference of Trapezoidal = {x1 + x2 + x3 + x4}") 
+    elif shap == "cy": 
+        if oper == 1: 
+            r = int(input("enter the radius of cylinders base: ")) 
+            h = int(input("enter the height of cylinders side area: ")) 
+            if r < 0 or h < 0: 
+                print("do not enter negative value") 
+            else: 
+                area_of_base_for_cylinder = 3.14*(r**2) 
+                side_area_of_cylinder = 2*3.14*r*h 
+                print(f"the side area of cylinder = {side_area_of_cylinder}") 
+                print(f"the total area of cylinder = {(2*area_of_base_for_cylinder) + (side_area_of_cylinder)}") 
+    elif shap == "pa": 
+        if oper == 1: 
+            b = float(input("enter the parallelograms base: ")) 
+            h = float(input("enter the parallelogram`s height: ")) 
+            if b < 0 or h < 0: 
+                print("do not enter negative value") 
+            else: 
+                print(f" the area of parallelogram = {b*h}") 
+        elif oper == 2:
+            x1 = float(input("enter the lenght of big rib: ")) 
+            x2 = float(input("enter the lenght of small rib: "))
+            if x1 < 0 or x2 < 0:
+                print("do not enter negative values")
+            else:
+                print(f"the circumference of parallelogram = {2*(x1+x2)}")
+
+#----------------------------------------------- 17
+
