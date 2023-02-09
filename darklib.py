@@ -1,3 +1,5 @@
+# Copyrights 2023 reserved for darklib teem 
+
 def sub(n1, *numbers):
     """ This function created by
     <-- DarkLib developers  --> """ 
